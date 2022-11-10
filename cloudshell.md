@@ -1,4 +1,4 @@
-Task 1. Prepare the source database for migration
+## Task 1. Prepare the source database for migration
 
 sudo apt install postgresql-13-pglogical
 
@@ -18,7 +18,6 @@ CREATE EXTENSION pglogical;
 
 CREATE USER migration_admin PASSWORD 'DMS_1s_cool!';
 ALTER DATABASE orders OWNER TO migration_admin;
-# ALTER DATABASE postgres OWNER TO migration_admin;
 ALTER ROLE migration_admin WITH REPLICATION;
 
 
@@ -67,12 +66,10 @@ ALTER TABLE public.inventory_items ADD PRIMARY KEY(id);
 \q 
 exit
 
-Task 2. Create a Database Migration Service connection profile for a stand-alone PostgreSQL database
+## Task 2. Create a Database Migration Service connection profile for a stand-alone PostgreSQL database
 
 
-Task 3
-
-Task 3: Create networks and firewalls
+## Task 3: Create networks and firewalls
  
 gcloud compute networks create vpc-network-h049 --subnet-mode custom
 
